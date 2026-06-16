@@ -3,8 +3,7 @@ import time
 from threading import Thread
 from flask import Flask, render_template_string
 from flask_socketio import SocketIO, emit
-import eventlet
-eventlet.monkey_patch()
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'neon_news_trading_secret!'
