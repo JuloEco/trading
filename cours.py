@@ -8,7 +8,7 @@ eventlet.monkey_patch()
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'neon_news_trading_secret!'
-socketio = SocketIO(app, cors_allowed_origins="*")
+socketio = SocketIO(app, cors_allowed_origins="*", async_mode='gevent')
 
 # --- BANQUE DE NEWS (Événements) ---
 NEWS_POOL = [
