@@ -591,8 +591,6 @@ def index():
         player=game_state["player"], 
         current_news=game_state["current_news"]
     )
-thread = Thread(target=market_simulation)
-thread.daemon = True
-thread.start()
+socketio.start_background_task(market_simulation)
 if __name__ == '__main__':
     socketio.run(app, host='0.0.0.0', port=5000, debug=True)
