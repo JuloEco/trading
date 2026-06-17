@@ -70,7 +70,7 @@ def market_simulation():
     """ Boucle principale : gère le marché, les dividendes, les news, l'IA et les ordres automatiques """
     seconds = 0
     while True:
-        time.sleep(1)
+        socketio.sleep(1)
         seconds += 1
         
         # 1. Génération d'une News toutes les 30 secondes
